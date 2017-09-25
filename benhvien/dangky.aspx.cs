@@ -14,10 +14,6 @@ namespace benhvien
         {
             if (!IsPostBack)
             {
-                for (int i = 1980; i <= 2017; i++)
-                {
-                    cmbnamsinh.Items.Add(i + "");
-                }
             }
         }
 
@@ -30,7 +26,7 @@ namespace benhvien
                 {
                     if (clsnhanvien.nguoidung_CheckUsername(txttendn.Text))
                     {
-                        clsbenhnhan.benhnhan_Insert(txtten.Text, cmbnamsinh.Text, gioitinh, txttendn.Text, txtpass.Text);
+                        clsbenhnhan.benhnhan_Insert(txtten.Text, DateTime.Parse(cmbnamsinh.Text), gioitinh, txttendn.Text, txtpass.Text);
                         Response.Write("<script>alert('Đăng ký thành công')</script>");
                         txtpass.Text = "";
                         txtten.Text = "";
@@ -42,9 +38,9 @@ namespace benhvien
                         Response.Write("<script>alert('Trùng tên đăng nhập')</script>");
                     }
                 }
-                catch
+                catch(Exception ex)
                 {
-                    Response.Write("<script>alert('Không thể thêm bệnh nhân')</script>");
+                    Response.Write("<script>alert('Không thể thêm bệnh nhân')"+ex.Message+"</script>");
                 }
             }
             else

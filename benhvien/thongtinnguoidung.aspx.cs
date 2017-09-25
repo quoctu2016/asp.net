@@ -14,10 +14,6 @@ namespace benhvien
         {
             if (!IsPostBack)
             {
-                for (int i = 1980; i < 2017; i++)
-                {
-                    cmbnamsinh.Items.Add(i + "");
-                }
                 if (Session["id_loainv"].ToString() == "4")
                 {
                     loadInfoBenhNhan();
@@ -32,7 +28,9 @@ namespace benhvien
         {
             DataTable dt = clsthongtinnguoidung.nguoidung_BenhNhan(Session["username"].ToString());
             txtten.Text = dt.Rows[0]["ten"].ToString();
-            cmbnamsinh.Text = dt.Rows[0]["namsinh"].ToString();
+            string a = dt.Rows[0]["namsinh"].ToString();
+            DateTime b = Convert.ToDateTime(a);
+            cmbnamsinh.Text = b.ToShortDateString();
             if (dt.Rows[0]["gioitinh"].ToString() == "Nam")
             {
                 rdbnam.Checked = true;
@@ -128,7 +126,7 @@ namespace benhvien
                     string gioitinh = (rdbnam.Checked) ? "Nam" : "Nữ";
                     try
                     {
-                        clsbenhnhan.benhnhan_Update(int.Parse(Session["id"].ToString()), txtten.Text, cmbnamsinh.Text, gioitinh, lbusername.Text, txtpass.Text);
+                        clsbenhnhan.benhnhan_Update(int.Parse(Session["id"].ToString()), txtten.Text,DateTime.Parse(cmbnamsinh.Text), gioitinh, lbusername.Text, txtpass.Text);
                         loadInfoBenhNhan();
                         Response.Write("<script>alert('Sửa thành công thông tin')</script>");
                     }

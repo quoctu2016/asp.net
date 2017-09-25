@@ -18,10 +18,6 @@ namespace benhvien
             {
                 cmbbv_SelectedIndexChanged(null, null);
                 cmbkhoa_SelectedIndexChanged(null, null);
-                for(int i = 1980; i <= 2017; i++)
-                {
-                    cmbnamsinh.Items.Add(i + "");
-                }
                 loadNV();
                 loadcmbBV();
                 loadcmbloainv();
@@ -138,7 +134,7 @@ namespace benhvien
                     string giottinh = (rdbnam.Checked) ? "Nam" : "Nữ";
                     try
                     {
-                            nv.updateNV(int.Parse(hdid.Value), txtten.Text, int.Parse(cmbnamsinh.Text), giottinh, int.Parse(cmbphong.SelectedValue.ToString()), int.Parse(cmbLoainv.SelectedValue.ToString()), txttendn.Text, txtpass.Text);
+                            nv.updateNV(int.Parse(hdid.Value), txtten.Text, DateTime.Parse(cmbnamsinh.Text), giottinh, int.Parse(cmbphong.SelectedValue.ToString()), int.Parse(cmbLoainv.SelectedValue.ToString()), txttendn.Text, txtpass.Text);
 
                             Response.Write("<script>alert('Sửa thành công nhân viên')</script>");
                             loadNV();
@@ -160,7 +156,7 @@ namespace benhvien
                     {
                         if (clsnhanvien.nguoidung_CheckUsername(txttendn.Text))
                         {
-                            nv.addNV(txtten.Text, int.Parse(cmbnamsinh.Text), giottinh, int.Parse(cmbphong.SelectedValue.ToString()), int.Parse(cmbLoainv.SelectedValue.ToString()), txttendn.Text, txtpass.Text);
+                            nv.addNV(txtten.Text, DateTime.Parse(cmbnamsinh.Text), giottinh, int.Parse(cmbphong.SelectedValue.ToString()), int.Parse(cmbLoainv.SelectedValue.ToString()), txttendn.Text, txtpass.Text);
                         Response.Write("<script>alert('Thêm thành công nhân viên')</script>");
                         loadNV();
                         mulnv.ActiveViewIndex = 0;

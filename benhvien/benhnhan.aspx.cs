@@ -15,10 +15,6 @@ namespace benhvien
         {
             if (!IsPostBack)
             {
-                for (int i = 1980; i <= 2017; i++)
-                {
-                    cmbnamsinh.Items.Add(i + "");
-                }
                 loadbenhnhan();
             }
         }
@@ -45,7 +41,7 @@ namespace benhvien
                     {
                         if (clsnhanvien.nguoidung_CheckUsername(txttendn.Text))
                         {
-                            clsbenhnhan.benhnhan_Insert(txtten.Text, cmbnamsinh.Text, gioitinh, txttendn.Text, txtpass.Text);
+                            clsbenhnhan.benhnhan_Insert(txtten.Text, DateTime.Parse(cmbnamsinh.Text), gioitinh, txttendn.Text, txtpass.Text);
                             Response.Write("<script>alert('Thêm thành công bệnh nhân')</script>");
                             loadbenhnhan();
                             mulnv.ActiveViewIndex = 0;
@@ -69,7 +65,7 @@ namespace benhvien
                     string gioitinh = (rdbnam.Checked) ? "Nam" : "Nữ";
                     try
                     {
-                            clsbenhnhan.benhnhan_Update(int.Parse(hdid.Value),txtten.Text, cmbnamsinh.Text, gioitinh, txttendn.Text, txtpass.Text);
+                        clsbenhnhan.benhnhan_Update(int.Parse(hdid.Value),txtten.Text,DateTime.Parse(cmbnamsinh.Text), gioitinh, txttendn.Text, txtpass.Text);
                         Response.Write("<script>alert('Sửa thành công bệnh nhân')</script>");
                         loadbenhnhan();
                         mulnv.ActiveViewIndex = 0;
@@ -106,7 +102,8 @@ namespace benhvien
             txtten.Text = dt.Rows[0]["ten"].ToString();
             txttendn.Text = dt.Rows[0]["username"].ToString();
             txtpass.Text = dt.Rows[0]["userpassword"].ToString();
-            cmbnamsinh.Text = dt.Rows[0]["namsinh"].ToString();
+            DateTime mydate = DateTime.Parse(dt.Rows[0]["namsinh"].ToString());
+            cmbnamsinh.Text = mydate.ToString("dd/MM/yyyy");
         }
 
         protected void gvBenhNhan_RowDeleting(object sender, GridViewDeleteEventArgs e)

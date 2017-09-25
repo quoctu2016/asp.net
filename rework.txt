@@ -1,0 +1,13 @@
+form dang ky:
+ 	chình ngày sinh, pass.
+form admin;
+	welcome my website
+	nam sinh cua form nhan vien
+form benh nhan:
+	xem d?t l?ch c?a b?nh nhân
+	toa thu?c ph?i có ch? d?nh
+	
+form thu?c
+	thi?u lo?i thu?c(thu?c u?ng thu?c tiêm,...)
+	xóa mã thu?c
+form chuyen vien chua làm

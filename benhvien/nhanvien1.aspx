@@ -19,7 +19,7 @@
                 <asp:BoundField DataField="gioitinh" HeaderText="Giới tính">
                 <ControlStyle Width="70px" />
                 </asp:BoundField>
-                <asp:BoundField DataField="namsinh" HeaderText="Năm sinh" />
+                <asp:BoundField DataField="namsinh" HeaderText="Năm sinh" DataFormatString="{0:dd/MM/yyyy}" />
                 <asp:TemplateField HeaderText="id" Visible="False">
                     <EditItemTemplate>
                         <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("id") %>'></asp:TextBox>
@@ -66,8 +66,7 @@
                 <tr>
                     <td style="text-align:right">Năm sinh:</td>
                     <td>
-                        <asp:DropDownList ID="cmbnamsinh" runat="server">
-                        </asp:DropDownList>
+                        <asp:TextBox ID="cmbnamsinh" runat="server" TextMode="Date"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>

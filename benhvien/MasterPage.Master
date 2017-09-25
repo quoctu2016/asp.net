@@ -15,7 +15,7 @@
     <form id="form1" runat="server">
         <div class="main">
             <div class="head">
-                <h1>WELCOME TO MY WEB</h1>
+                <h1>HOSPITAL&nbsp; APPLICATION</h1>
                 <a class="btn" href="logout.aspx">LOG OUT</a>
             </div>
             <div class="content">

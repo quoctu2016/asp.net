@@ -25,8 +25,7 @@
                 <tr>
                     <td style="text-align:right">Năm sinh:</td>
                     <td>
-                        <asp:DropDownList ID="cmbnamsinh" runat="server" Width="130px">
-                        </asp:DropDownList>
+                        <asp:TextBox ID="cmbnamsinh" runat="server" TextMode="Date"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -46,21 +45,19 @@
                 <tr>
                     <td style="text-align:right">Mật khẩu:</td>
                     <td>
-                        <asp:TextBox ID="txtpass" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtpass" runat="server" TextMode="Password"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Bạn phải nhập mật khẩu" ControlToValidate="txtpass" ForeColor="#FF3300">*</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align:right">Nhập lại mật khẩu:</td>
                     <td>
-                        <asp:TextBox ID="txtrepass" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtrepass" runat="server" TextMode="Password"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Bạn phải nhập lại mật khẩu" ControlToValidate="txtrepass" ForeColor="#FF3300">*</asp:RequiredFieldValidator>
                         <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtpass" ControlToValidate="txtrepass" ErrorMessage="Bạn nhập mật khẩu lại sai" ForeColor="#FF3300">*</asp:CompareValidator>
                     </td>
                 </tr>
-                <tr>
                     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="#FF3300" />
-                </tr>
                 <tr>
                     <td></td>
                     <td>

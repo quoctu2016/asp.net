@@ -24,7 +24,7 @@ namespace _benhvien.DAL
             cm.CommandType = CommandType.StoredProcedure;
             return DbSql.DbSql.getData(cm);
         }
-        public static void benhnhan_Insert(string ten, string namsinh,string gioitinh,string username, string password)
+        public static void benhnhan_Insert(string ten, DateTime namsinh,string gioitinh,string username, string password)
         {
             SqlCommand cm = new SqlCommand();
             cm.CommandText = "benhnhan_Insert";
@@ -36,7 +36,7 @@ namespace _benhvien.DAL
             cm.CommandType = CommandType.StoredProcedure;
             DbSql.DbSql.executeNonQuery(cm);
         }
-        public static void benhnhan_Update(int id,string ten, string namsinh, string gioitinh, string username, string password)
+        public static void benhnhan_Update(int id,string ten, DateTime namsinh, string gioitinh, string username, string password)
         {
             SqlCommand cm = new SqlCommand();
             cm.CommandText = "benhnhan_Update";

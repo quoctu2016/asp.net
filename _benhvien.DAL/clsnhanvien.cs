@@ -28,7 +28,7 @@ namespace _benhvien.DAL
             DataTable dt = DbSql.DbSql.getData(cm);
             return dt;
         }
-        public void addNV(string ten,int namsinh,string gt,int id_phong,int id_lnv,string usname,string pass)
+        public void addNV(string ten,DateTime namsinh,string gt,int id_phong,int id_lnv,string usname,string pass)
         {
             SqlCommand cm = new SqlCommand();
             cm.CommandText = "nhanvien_Insert";
@@ -42,7 +42,7 @@ namespace _benhvien.DAL
             cm.Parameters.AddWithValue("@password", pass);
                 DbSql.DbSql.executeNonQuery(cm);
         }
-        public void updateNV(int id,string ten, int namsinh, string gt, int id_phong, int id_lnv, string usname, string pass)
+        public void updateNV(int id,string ten, DateTime namsinh, string gt, int id_phong, int id_lnv, string usname, string pass)
         {
             SqlCommand cm = new SqlCommand();
             cm.CommandText = "nhanvien_Update";

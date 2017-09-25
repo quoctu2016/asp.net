@@ -15,3 +15,11 @@ C:\Users\Quoc Tu\Desktop\benhvien\benhvien\_benhvien.DAL\bin\Debug\DevComponents
 C:\Users\Quoc Tu\Desktop\benhvien\benhvien\_benhvien.DAL\obj\Debug\_benhvien.DAL.csprojResolveAssemblyReference.cache
 C:\Users\Quoc Tu\Desktop\benhvien\benhvien\_benhvien.DAL\obj\Debug\_benhvien.DAL.dll
 C:\Users\Quoc Tu\Desktop\benhvien\benhvien\_benhvien.DAL\obj\Debug\_benhvien.DAL.pdb
+C:\Users\Quoc Tu\Desktop\asp.net\_benhvien.DAL\bin\Debug\_benhvien.DAL.dll
+C:\Users\Quoc Tu\Desktop\asp.net\_benhvien.DAL\bin\Debug\_benhvien.DAL.pdb
+C:\Users\Quoc Tu\Desktop\asp.net\_benhvien.DAL\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Quoc Tu\Desktop\asp.net\_benhvien.DAL\bin\Debug\DbSql.pdb
+C:\Users\Quoc Tu\Desktop\asp.net\_benhvien.DAL\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Quoc Tu\Desktop\asp.net\_benhvien.DAL\obj\Debug\_benhvien.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Quoc Tu\Desktop\asp.net\_benhvien.DAL\obj\Debug\_benhvien.DAL.dll
+C:\Users\Quoc Tu\Desktop\asp.net\_benhvien.DAL\obj\Debug\_benhvien.DAL.pdb

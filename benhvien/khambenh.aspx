@@ -122,8 +122,13 @@
                                 <asp:ListItem>Vĩ</asp:ListItem>
                                 <asp:ListItem>Viên</asp:ListItem>
                                 <asp:ListItem>Hộp</asp:ListItem>
+                                <asp:ListItem>Thuốc tiêm</asp:ListItem>
+                                <asp:ListItem>Thuốc thoa</asp:ListItem>
                             </asp:DropDownList>
-                            <br />
+                            <br /><br />
+                            Chỉ định:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:TextBox ID="txtchidinh" runat="server"></asp:TextBox>
+                            <br /><br />
                             <asp:Button ID="btnthemthuoc" runat="server" Text="Thêm thuốc" OnClick="btnthemthuoc_Click" /><br />
                             <asp:GridView ID="gvkethuoc" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="50%">
                                 <AlternatingRowStyle BackColor="White" />

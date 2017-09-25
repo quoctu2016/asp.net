@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="thongtinnguoidung.aspx.cs" Inherits="benhvien.thongtinnguoidung" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style1 {
+            height: 40px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <fieldset>
@@ -18,13 +23,12 @@
             <tr>
                 <td style="text-align:right">Năm sinh:</td>
                 <td style="padding:10px">
-                    <asp:DropDownList ID="cmbnamsinh" runat="server">
-                    </asp:DropDownList>
+                    <asp:TextBox ID="cmbnamsinh" runat="server" TextMode="Date"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td style="text-align:right">Giới tính:</td>
-                <td style="padding:10px">
+                <td style="text-align:right" class="auto-style1">Giới tính:</td>
+                <td style="padding:10px" class="auto-style1">
                     <asp:RadioButton ID="rdbnam" runat="server" Checked="True" GroupName="gioitinh" Text="Nam" />
                     <asp:RadioButton ID="rdbnu" runat="server" GroupName="gioitinh" Text="Nữ" />
                 </td>
