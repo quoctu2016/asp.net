@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="benhvien.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Content/style.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="main">
+            <div class="head">
+                <h1>WELCOME TO MY WEB</h1>
+                <a class="btn" href="logout.aspx">LOG OUT</a>
+            </div>
+            <div class="content">
+                <div class="content-left">
+                    <ul>
+                        <asp:Repeater ID="rpmenu" runat="server">
+                            <ItemTemplate>
+                                <li><a href="<%# Eval("link") %>" class="btn a-menu"><%# Eval("ten") %></a></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </ul>
+                </div>
+                <div class="content-right">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        content-right
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
